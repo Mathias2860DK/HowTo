@@ -45,5 +45,9 @@ public class ImportData {
 
         return fruitList;
     }
-
+public void printFruitList(){
+    for (Fruit fruit: fruitList) {
+        System.out.print(fruit);
+    }
+}
 }

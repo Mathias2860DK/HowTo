@@ -8,12 +8,14 @@ public class Main {
     How to load data from a csv file and into an array.
     Remember an empty line in the csv file is not equal to null.
     If you have an empty line.
-    You often want to make a class to import the data from the csv, because it's not important
+    You often want to make a class to import the data from the csv, and load the data into objects (like Fruit)
      */
 
     public static void main(String[] args) {
 ImportData importData = new ImportData();
 List<Fruit> result = importData.fillListWithFruits();
         System.out.println(result); //Prints Fruit's toString method
+        importData.printFruitList(); //Prints the fruitList by looping through each Fruit
+        //
     }
 }
