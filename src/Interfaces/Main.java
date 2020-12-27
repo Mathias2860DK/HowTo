@@ -22,7 +22,7 @@ Fruit fruit2 = new Fruit("Pear",2.5,1148);
         fruitList.add(fruit1);
         fruitList.add(fruit2);
         System.out.println("Before the ArrayList is sorted: " + "\n" + fruitList);
-        Collections.sort(fruitList);
+        Collections.sort(fruitList); // sorts the list by the price.
         System.out.println("After the ArrayList is sorted: " + "\n" + fruitList);
     }
 }
