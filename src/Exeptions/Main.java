@@ -17,6 +17,7 @@ public class Main {
             } else {
                 System.out.println("You do have enough money for withdrawal! ");
             }
+            //You still have to catch the exception. It's not enough to just throw it.
 } catch (NotEnoughMoneyException exception){
             System.out.println(exception.getMessage());
         }

@@ -29,11 +29,14 @@ zero, if the current object is equal to the specified object.
  */
     @Override
     public int compareTo(Fruit o) {
-        return (int) (this.price - (o.getPrice()));
+        //return (int) (this.price - (o.getPrice()));
+        return Double.compare(this.price,o.price);
     }
 
     @Override
     public String toString() {
         return  name + "....." + price +" DKK" + "\n";
     }
+
+
 }
