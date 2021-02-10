@@ -17,4 +17,12 @@ public class Fruit {
         return name + ".... " + price + " kr." + "\n"; //barcode is not printed, because it's not important.
         //Maybe you want to access the product via the barcode
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -1,5 +1,8 @@
 package Interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Fruit implements Comparable <Fruit> {
 
     /*
@@ -10,6 +13,10 @@ public class Fruit implements Comparable <Fruit> {
     String name;
     double price;
     int barcode;
+public Fruit (){
+
+}
+
 
     public Fruit(String name, double price, int barcode) {
         this.name = name;
@@ -18,6 +25,7 @@ public class Fruit implements Comparable <Fruit> {
     }
 
     public double getPrice() {
+
         return price;
     }
 /*
@@ -29,14 +37,25 @@ zero, if the current object is equal to the specified object.
  */
     @Override
     public int compareTo(Fruit o) {
-        //return (int) (this.price - (o.getPrice()));
-        return Double.compare(this.price,o.price);
+        //return (int) (this.price - (o.getPrice())); //This will return an int. If the number is 2,5 or
+        //2,6 -> 2 will be the compared number in both cases.
+        return Double.compare(this.price,o.price); // 2,5 and 2,6 in this case will sort the list properly.
     }
+public void printFruitList(List<Fruit> fruitList){
+    for (Fruit fruit1: fruitList) {
+        System.out.println(fruit1);
+
+    }
+}
+   /* @Override
+    public int compareTo(Fruit o) {
+        //If you want sort the list alphabetically
+        return this.name.compareTo(o.name);
+    }*/
+
 
     @Override
     public String toString() {
         return  name + "....." + price +" DKK" + "\n";
     }
-
-
 }
